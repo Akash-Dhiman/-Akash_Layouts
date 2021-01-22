@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fading Effects</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+	.centerdiv{
+		width: 500px;
+		height: 350px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	#firstdiv{
+		width: 200px;
+		height: 100px;
+		background-color: orange;
+		text-align: center;
+	}
+	#firstdiv2{
+		width: 200px;
+		height: 100px;
+		background-color: blue;
+		text-align: center;
+	}
+	#firstdiv3{
+		width: 200px;
+		height: 100px;
+		background-color: green;
+		text-align: center;
+	}
+</style>
+<body>
+
+	<h1 style="text-align: center;">With jQuery You Can Fade An Element In And Out Of Visibility.</h1>
+	<br>
+	<div class="centerdiv">
+	<button id="btnfadeout">FadeOut</button>
+	<button id="btnfadein">FadeIn</button>
+	<hr>
+	<div id="firstdiv">go </div>
+	<br>
+	<div id="firstdiv2">run </div>
+	<br>
+	<div id="firstdiv3">runnnnnnnnnnnnnn...... </div>
+	<br>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$("#btnfadeout").click(function(){
+			$("#firstdiv").fadeOut();
+			$("#firstdiv2").fadeOut("slow");
+			$("#firstdiv3").fadeOut(3000);
+		});
+			$("#btnfadein").click(function(){
+			$("#firstdiv").fadeIn();
+			$("#firstdiv2").fadeIn("slow");
+			$("#firstdiv3").fadeIn(3000);
+		});
+	});
+</script>
+</body>
+</html>

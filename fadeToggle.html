@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade Toggle</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+	#centerdiv{
+	
+		width: 500px;
+		height: 350px;
+		}
+		#first{
+			background-color: orange;
+			width: 250px;
+			height: 150px;
+			left: 50%;
+		}
+		#first1{
+			background-color: black;
+			width: 250px;
+			height: 150px;
+			
+		}
+		
+		#first2{
+			background-color: blue;
+			width: 250px;
+			height: 150px;
+			
+		}
+		
+	
+</style>
+<body>
+
+	<h1 style="text-align: center; color: red;">Fade Toggle Just Behave Like Same As FadeOut And FadeIn Only One Click.</h1>
+	<hr>
+	<div class="centerdiv">
+		<div id="first"></div>
+		<br>
+		<div id="first1"></div>
+		<br>
+		<div id="first2"></div>
+	</div>
+	<br>
+	<button id="btn_id">Click Me</button>
+
+
+
+<script>
+	$(document).ready(function(){
+		$("#btn_id").click(function() {
+			$("#first").fadeToggle();
+			$("#first1").fadeToggle("slow");
+			$("#first2").fadeToggle(1000);
+		})
+	});
+	
+</script>
+</body>
+</html>

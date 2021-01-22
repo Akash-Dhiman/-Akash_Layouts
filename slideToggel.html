@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Toggle</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	h1{
+		text-align: center;
+		color: red;
+		letter-spacing: 4px;
+		margin-bottom: 50px;
+		margin-top: 10px;
+	}
+	#flip,#panel{
+		padding: 7px;
+		border: 2px solid black;
+		text-align: center;
+		color: blue;
+		letter-spacing: 4px;
+		font-family: sans-serif;
+		background-color: gray;
+	}
+	#panel{
+		padding: 50px;
+		border: 2px solid black;
+		display: none;
+		color: white;
+		background-color: skyblue;
+		letter-spacing: 5px;
+		font-family: sans-serif;
+	}
+</style>
+<body>
+
+	<h1>The jQuery slideToggle() method toggles between the slidedown() and slideUp() methods.</h1>
+	<div id="flip">CarryOn With Me Lovely.</div>
+	<div id="panel">Hello How Are You Guys....Hope All You are Doing Good. I am Akash Dhiman Pursuing B.Tech Computer Science Engineer From S.D.C.E.T</div>
+	<script>
+		$(document).ready(function(){
+			$("#flip").click(function(){
+				$("#panel").slideToggle("slow");
+			});
+		});
+		
+	</script>
+
+</body>
+</html>

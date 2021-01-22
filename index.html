@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Focus & Blur</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<h2>Focus & Blur</h2>
+	<input type="text" id="textbox">
+	<span id="showdata">Welcome Akash</span>
+	<span id="showdataforblur">Take Care Buddy.</span>
+
+	<script>
+		$(document).ready(function(){
+			$("span").css("display","none");
+			$("#textbox").focus(function(){
+				$("#showdata").css("display","inline").fadeOut(4000);
+			})
+
+			$("#textbox").blur(function(){
+				$("#showdataforblur").css("display","inline").fadeOut(4000);
+			});
+		});
+	</script>
+</body>
+</html>

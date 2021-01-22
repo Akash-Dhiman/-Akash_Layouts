@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle Effect</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.main{
+		display: flex;
+	}
+	.red{
+		width: 100px;
+		height: 400px;
+		border: 2px solid black;
+	}
+	.blue{
+		width: 100px;
+		height: 400px;
+		border: 2px solid black;
+	}
+
+	#btn_id{
+		width: 80px;
+		height: 20px;
+		margin: 5px;
+	}
+</style>
+<body>
+
+	<div class="main">
+		<div class="red">HELLO</div>
+		<div class="red">AKASH</div>
+		<div class="red">DHIMAN</div>
+		<div class="blue">RAJA</div>
+		<div class="blue">VISHWAKARMA</div>
+		<div class="blue">TECHNOLOGY</div>
+	</div>	
+	<button id="btn_id">click me</button>
+
+
+	<script>
+		$(document).ready(function(){
+			$(".red").css("backgroundColor","red");
+			$(".blue").css("backgroundColor","blue");
+
+			$("#btn_id").click(function(){
+				$(".main").toggle("slow");
+			});
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DatePicker Changeable</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min">
+</head>
+<body>
+  	<h1 style="text-transform: uppercase; text-align: center;">Enter Your BioData</h1>
+	<hr>
+	<br>
+	<form>
+		<fieldset>
+			<legend align="bottom" style="text-transform: uppercase; font-size: 1.6em">BioData:</legend>
+			Name:<input type="text" size="30" class="form-control" placeholder="username"><br><br>
+			Email:<input type="text" size="30" class="form-control" placeholder="abc@abc.com"><br><br>
+			D O B:<input type="date" size="30" class="form-control" id="DatePicker">
+			<input type="submit" name="">
+		</fieldset>
+	</form>
+	<script>
+		$(document).ready(function(){
+			("#DatePicker").datePicker({
+				dateFormat:"dd-mm-yy"
+			});
+		});
+	</script>
+</body>
+</html>
